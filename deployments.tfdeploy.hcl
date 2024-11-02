@@ -2,7 +2,7 @@ identity_token "azurerm" {
   audience = [ "api://AzureADTokenExchange" ]
 }
 
-deployment "development" {
+deployment "westeurope" {
   inputs = {
     deployment_location       = "westeurope"
     rg_name    = "rg-demo-stacks-wl1-we"
