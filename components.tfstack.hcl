@@ -1,8 +1,8 @@
 component "rg" {
     source = "./modules/microsoft.resources/rg"
     inputs = {
-        location = var.deployment_location
-        name = var.rg_name
+        deployment_location = var.deployment_location
+        resource_group_name = var.rg_name
     }
 
     providers = {
