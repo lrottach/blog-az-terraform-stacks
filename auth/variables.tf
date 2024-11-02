@@ -13,6 +13,11 @@ variable "project_name" {
   description = "HCP Terraform project name"
 }
 
+variable "app_name" {
+  type        = string
+  description = "HCP Terraform application name"
+}
+
 variable "stack_name" {
   type        = string
   description = "Terraform stack name"
