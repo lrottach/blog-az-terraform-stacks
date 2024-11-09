@@ -58,7 +58,7 @@ component "vm" {
         vm_os_disk_size = var.vm_os_disk_size
 
         // Network Variables
-        vnet_subnet_compute_id = component.vnet.vnet_subnet_compute_id
+        subnet_id = component.vnet.subnet_id
     }
 
     providers = {
