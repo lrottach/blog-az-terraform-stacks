@@ -34,7 +34,7 @@ resource "azurerm_network_interface" "this" {
 // **********************
 resource "azurerm_virtual_machine" "this" {
   count                 = var.vm_count
-  name                  = "${locals.vm_prefix}${count.index}"
+  name                  = "${local.vm_prefix}${count.index}"
   location              = var.deployment_location
   resource_group_name   = var.rg_name
   network_interface_ids = [element(azurerm_network_interface.this.*.id, count.index)]
@@ -42,7 +42,7 @@ resource "azurerm_virtual_machine" "this" {
   vm_size = var.vm_size
 
   storage_os_disk {
-    name              = "${locals.vm_prefix}${count.index}-osdisk"
+    name              = "${local.vm_prefix}${count.index}-osdisk"
     caching           = "ReadWrite"
     create_option     = "FromImage"
     managed_disk_type = "Standard_LRS"
@@ -57,7 +57,7 @@ resource "azurerm_virtual_machine" "this" {
   }
 
   os_profile {
-    computer_name  = "${locals.vm_prefix}${count.index}"
+    computer_name  = "${locas.vm_prefix}${count.index}"
     admin_username = "adminuser"
     admin_password = "Password1234!"
   }
