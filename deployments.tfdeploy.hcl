@@ -1,3 +1,12 @@
+// ***********************************************************************
+//
+//  Author: Lukas Rottach
+//  GitHub: https://github.com/lrottach
+//  Type: Terraform Stacks - Deployment
+//  Version: 0.1.0
+//
+// ***********************************************************************
+
 identity_token "azurerm" {
   audience = [ "api://AzureADTokenExchange" ]
 }

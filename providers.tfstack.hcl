@@ -1,3 +1,12 @@
+// ***********************************************************************
+//
+//  Author: Lukas Rottach
+//  GitHub: https://github.com/lrottach
+//  Type: Terraform Stacks - Provider
+//  Version: 0.1.0
+//
+// ***********************************************************************
+
 required_providers {
   azurerm = {
     source  = "hashicorp/azurerm"

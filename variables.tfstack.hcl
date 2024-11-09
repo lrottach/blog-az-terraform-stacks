@@ -1,3 +1,12 @@
+// ***********************************************************************
+//
+//  Author: Lukas Rottach
+//  GitHub: https://github.com/lrottach
+//  Type: Terraform Stacks - Varaiables
+//  Version: 0.1.0
+//
+// ***********************************************************************
+
 variable "deployment_location" {
   type        = string
   description = "Azure location name"
