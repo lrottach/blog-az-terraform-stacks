@@ -52,3 +52,22 @@ variable "tenant_id" {
   description = "Azure tenant ID"
   default = "cb5d5a54-23f2-447e-8850-d43b278d1d15"
 }
+
+// Virtual Machine variables
+variable "vm_size" {
+  type        = string
+  description = "Azure VM size"
+  default     = "Standard_B1s"
+}
+
+variable "vm_os_disk_size" {
+  type        = number
+  description = "Size of the OS disk in GB"
+  default     = 30
+}
+
+variable "vm_count" {
+  type        = number
+  description = "Number of virtual machines"
+  default     = 1
+}

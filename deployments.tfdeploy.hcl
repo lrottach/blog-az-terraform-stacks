@@ -17,6 +17,11 @@ deployment "westeurope" {
     deployment_location       = "westeurope"
     project_identifier = "demo-stacks-wl1-we"
 
+    // Virtual Machine variables
+    vm_size = "Standard_B1s"
+    vm_count = 2
+    vm_os_disk_size = 64
+
     // Network variables
     vnet_address_space = [ "10.10.0.0/16" ]
     vnet_subnet_compute_range = "10.10.1.0/24"
