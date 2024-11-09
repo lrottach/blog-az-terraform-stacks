@@ -3,9 +3,21 @@ variable "deployment_location" {
   description = "Azure location name"
 }
 
+// Will be used to create unique resource names
 variable "project_identifier" {
   type        = string
   description = "Name suffix for resource names"
+}
+
+// Network variables
+variable "vnet_address_space" {
+  type        = list(string)
+  description = "Address space for the virtual network"
+}
+
+variable "vnet_subnet_compute_range" {
+  type        = string
+  description = "Dedicated subnet for compute resources"
 }
 
 variable "identity_token" {

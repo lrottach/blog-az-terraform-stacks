@@ -4,8 +4,13 @@ identity_token "azurerm" {
 
 deployment "westeurope" {
   inputs = {
+    // Deployment variables
     deployment_location       = "westeurope"
     project_identifier = "demo-stacks-wl1-we"
+
+    // Network variables
+    vnet_address_space = [ "10.10.0.0/16" ]
+    vnet_subnet_compute_range = "10.10.1.0/24"
 
     identity_token  = identity_token.azurerm.jwt
   }
