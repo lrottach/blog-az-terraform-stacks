@@ -1,5 +1,9 @@
+locals {
+  rg_name = "rg-${var.project_identifier}"
+}
+
 // Azure Resource Group
 resource "azurerm_resource_group" "this" {
-  name     = var.resource_group_name
+  name     = local.rg_name
   location = var.deployment_location
 }

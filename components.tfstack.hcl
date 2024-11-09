@@ -2,7 +2,7 @@ component "rg" {
     source = "./modules/microsoft.resources/rg"
     inputs = {
         deployment_location = var.deployment_location
-        resource_group_name = var.rg_name
+        project_identifier = "demo-stacks-wl1-we"
     }
 
     providers = {

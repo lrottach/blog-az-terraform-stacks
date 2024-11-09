@@ -3,7 +3,7 @@ variable "deployment_location" {
   description = "Azure deployment location"
 }
 
-variable "project_identifier" {
+variable "resource_group_name" {
   type        = string
   description = "Azure resource group name"
 }
