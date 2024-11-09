@@ -57,7 +57,7 @@ resource "azurerm_virtual_machine" "this" {
   }
 
   os_profile {
-    computer_name  = "${locas.vm_prefix}${count.index}"
+    computer_name  = "${local.vm_prefix}${count.index}"
     admin_username = "adminuser"
     admin_password = "Password1234!"
   }
