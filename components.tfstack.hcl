@@ -19,4 +19,8 @@ component "vnet" {
         vnet_address_space = var.vnet_address_space
         vnet_subnet_compute_range = var.vnet_subnet_compute_range
     }
+
+    providers = {
+        azurerm = provider.azurerm.this
+    }
 }
