@@ -18,4 +18,5 @@ component "vnet" {
         project_identifier = var.project_identifier
         vnet_address_space = var.vnet_address_space
         vnet_subnet_compute_range = var.vnet_subnet_compute_range
+    }
 }
