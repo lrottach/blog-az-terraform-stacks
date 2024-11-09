@@ -7,7 +7,7 @@
 	"features": {
 		"ghcr.io/devcontainers/features/azure-cli:1": {},
 		"ghcr.io/devcontainers/features/powershell:1": {},
-		"ghcr.io/devcontainers-contrib/features/terraform-asdf:2": {}
+		"ghcr.io/devcontainers-extra/features/tfenv-homebrew:1": {}
 	},
 	"customizations": {
 		"vscode": {
