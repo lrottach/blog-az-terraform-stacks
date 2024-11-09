@@ -19,7 +19,7 @@ locals {
 
 resource "azurerm_network_interface" "this" {
   count               = var.vm_count
-  name                = "${locals.vm_prefix}${count.index}-nic"
+  name                = "${local.vm_prefix}${count.index}-nic"
   location            = var.deployment_location
   resource_group_name = var.rg_name
 
