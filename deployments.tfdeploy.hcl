@@ -5,7 +5,7 @@ identity_token "azurerm" {
 deployment "westeurope" {
   inputs = {
     deployment_location       = "westeurope"
-    rg_name    = "rg-demo-stacks-wl1-we"
+    project_identifier = "demo-stacks-wl1-we"
 
     identity_token  = identity_token.azurerm.jwt
   }
