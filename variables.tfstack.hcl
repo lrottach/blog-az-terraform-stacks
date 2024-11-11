@@ -7,28 +7,8 @@
 //
 // ***********************************************************************
 
-variable "deployment_location" {
-  type        = string
-  description = "Azure location name"
-}
-
-// Will be used to create unique resource names
-variable "project_identifier" {
-  type        = string
-  description = "Name suffix for resource names"
-}
-
-// Network variables
-variable "vnet_address_space" {
-  type        = list(string)
-  description = "Address space for the virtual network"
-}
-
-variable "vnet_subnet_compute_range" {
-  type        = string
-  description = "Dedicated subnet for compute resources"
-}
-
+// Provider Configuration
+// **********************
 variable "identity_token" {
   type        = string
   ephemeral   = true
@@ -53,7 +33,34 @@ variable "tenant_id" {
   default = "cb5d5a54-23f2-447e-8850-d43b278d1d15"
 }
 
-// Virtual Machine variables
+// Deployment Variables
+// **********************
+variable "deployment_location" {
+  type        = string
+  description = "Azure location name"
+}
+
+// Will be used to create unique resource names
+variable "project_identifier" {
+  type        = string
+  description = "Name suffix for resource names"
+}
+
+// Network Variables
+// **********************
+variable "vnet_address_space" {
+  type        = list(string)
+  description = "Address space for the virtual network"
+}
+
+variable "vnet_subnet_compute_range" {
+  type        = string
+  description = "Dedicated subnet for compute resources"
+}
+
+
+// Virtual Machine Variables
+// **********************
 variable "vm_size" {
   type        = string
   description = "Azure VM size"

@@ -16,7 +16,6 @@ locals {
 
 // Network Interface
 // **********************
-
 resource "azurerm_network_interface" "this" {
   count               = var.vm_count
   name                = "${local.vm_prefix}${count.index}-nic"

@@ -19,7 +19,7 @@ deployment "westeurope" {
 
     // Virtual Machine variables
     vm_size = "Standard_B1s"
-    vm_count = 2
+    vm_count = 3
     vm_os_disk_size = 64
 
     // Network variables
