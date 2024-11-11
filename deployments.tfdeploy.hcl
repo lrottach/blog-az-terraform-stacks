@@ -29,3 +29,41 @@ deployment "westeurope" {
     identity_token  = identity_token.azurerm.jwt
   }
 }
+
+deployment "eastus" {
+  inputs = {
+    // Deployment variables
+    deployment_location       = "eastus"
+    project_identifier = "demo-stacks-wl1-eus"
+
+    // Virtual Machine variables
+    vm_size = "Standard_B1s"
+    vm_count = 1
+    vm_os_disk_size = 64
+
+    // Network variables
+    vnet_address_space = [ "10.20.0.0/16" ]
+    vnet_subnet_compute_range = "10.20.1.0/24"
+
+    identity_token  = identity_token.azurerm.jwt
+  }
+}
+
+deployment "australiaeast" {
+  inputs = {
+    // Deployment variables
+    deployment_location       = "australiaeast"
+    project_identifier = "demo-stacks-wl1-ae"
+
+    // Virtual Machine variables
+    vm_size = "Standard_B1s"
+    vm_count = 3
+    vm_os_disk_size = 64
+
+    // Network variables
+    vnet_address_space = [ "10.30.0.0/16" ]
+    vnet_subnet_compute_range = "10.30.1.0/24"
+
+    identity_token  = identity_token.azurerm.jwt
+  }
+}
