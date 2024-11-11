@@ -7,6 +7,15 @@
 //
 // ***********************************************************************
 
+orchestrate "auto_approve" "no_vnet_changes" {
+    check {
+        # Check that the pet component has no changes
+        condition = context.plan.component_changes["component.vnet"].total == 0
+        reason = "Not automatically approved because changes proposed to vnet component."
+    }
+}
+
+
 identity_token "azurerm" {
   audience = [ "api://AzureADTokenExchange" ]
 }
